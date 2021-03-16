@@ -1,6 +1,6 @@
 const { QueryTypes } = require("sequelize");
-const { db, cleanTable, deleteResoueceById } = require("../db");
-const { insert, findUserById, getUsersData, updateUserData } = require("../models/user");
+const { db, cleanTable, deleteResoueceById } = require("../database");
+const { insert, findUserById, getUsersData, updateUserData } = require("../models/user-repo");
 
 
 async function clean() {

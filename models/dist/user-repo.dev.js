@@ -3,7 +3,7 @@
 var _require = require("sequelize"),
     QueryTypes = _require.QueryTypes;
 
-var _require2 = require("../db"),
+var _require2 = require("../database"),
     db = _require2.db;
 
 var bcrypt = require('bcrypt');

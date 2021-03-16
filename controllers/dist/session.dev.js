@@ -2,7 +2,7 @@
 
 var bcrypt = require('bcrypt');
 
-var _require = require("../db"),
+var _require = require("../database"),
     db = _require.db;
 
 var _require2 = require("sequelize"),

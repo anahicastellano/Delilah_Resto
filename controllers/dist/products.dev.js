@@ -3,14 +3,14 @@
 var _require = require("sequelize"),
     QueryTypes = _require.QueryTypes;
 
-var _require2 = require("../db"),
+var _require2 = require("../database"),
     db = _require2.db,
     getResourceById = _require2.getResourceById,
     getAllResources = _require2.getAllResources,
     deleteResoueceById = _require2.deleteResoueceById,
     cleanTable = _require2.cleanTable;
 
-var _require3 = require("../models/products"),
+var _require3 = require("../models/products-repo"),
     insertProducts = _require3.insertProducts,
     updateAProduct = _require3.updateAProduct;
 

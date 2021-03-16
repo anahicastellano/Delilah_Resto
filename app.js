@@ -16,7 +16,7 @@ app.use(rateLimit({ windowMs: 60 * 60 * 1000, max: 5 }));
 app.use(authenticateToken);
 app.use(express.json());
 
-routes.app()
+routes(app);
 
 //routes
 require('./routes/index-routes.js');

@@ -7,12 +7,12 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 var _require = require("sequelize"),
     QueryTypes = _require.QueryTypes;
 
-var _require2 = require("../db"),
+var _require2 = require("../database"),
     db = _require2.db,
     cleanTable = _require2.cleanTable,
     deleteResoueceById = _require2.deleteResoueceById;
 
-var _require3 = require("../models/user"),
+var _require3 = require("../models/user-repo"),
     insert = _require3.insert,
     findUserById = _require3.findUserById,
     getUsersData = _require3.getUsersData,

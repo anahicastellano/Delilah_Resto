@@ -23,7 +23,7 @@ app.use(rateLimit({
 }));
 app.use(authenticateToken);
 app.use(express.json());
-routes.app(); //routes
+routes(app); //routes
 
 require('./routes/index-routes.js'); // Start the server
 

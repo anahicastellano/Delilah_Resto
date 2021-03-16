@@ -1,5 +1,5 @@
 const { QueryTypes } = require("sequelize");
-const { db } = require("../db");
+const { db } = require("../database");
 
 async function insertProducts(products) {
     const result = await db.query(`

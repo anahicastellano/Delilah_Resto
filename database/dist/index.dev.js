@@ -3,32 +3,28 @@
 var _require = require("sequelize"),
     Sequelize = _require.Sequelize;
 
-var _require2 = require("sequelize"),
-    QueryTypes = _require2.QueryTypes; // const dotenv = require('dotenv').config();
-
-
 var db = new Sequelize(process.env.DB, process.env.DBUSER, process.env.DBPASS, {
   host: process.env.DBHOST,
   port: process.env.DBPORT,
   dialect: "mysql"
 });
 
-function alreadyExist(user) {
-  var alreadyExist;
-  return regeneratorRuntime.async(function alreadyExist$(_context) {
+function getResourceById(table, id) {
+  var resource;
+  return regeneratorRuntime.async(function getResourceById$(_context) {
     while (1) {
       switch (_context.prev = _context.next) {
         case 0:
           _context.next = 2;
-          return regeneratorRuntime.awrap(db.query("SELECT * FROM ".concat(table, " where id = :id"), {
-            type: QueryTypes.SELECT,
+          return regeneratorRuntime.awrap(db.query("select * from ".concat(table, " where id = :id"), {
             replacements: {
               id: id
-            }
+            },
+            type: QueryTypes.SELECT
           }));
 
         case 2:
-          alreadyExist = _context.sent;
+          resource = _context.sent;
 
           if (!(resource.length === 0)) {
             _context.next = 5;
@@ -38,7 +34,7 @@ function alreadyExist(user) {
           throw new Error("No existe el recurso en ".concat(table));
 
         case 5:
-          return _context.abrupt("return", alreadyExist);
+          return _context.abrupt("return", resource[0]);
 
         case 6:
         case "end":
@@ -47,6 +43,8 @@ function alreadyExist(user) {
     }
   });
 }
+
+;
 
 function getAllResources(table) {
   return regeneratorRuntime.async(function getAllResources$(_context2) {
@@ -118,7 +116,7 @@ function cleanTable(table) {
 
 module.exports = {
   db: db,
-  alreadyExist: alreadyExist,
+  getResourceById: getResourceById,
   getAllResources: getAllResources,
   deleteResoueceById: deleteResoueceById,
   cleanTable: cleanTable

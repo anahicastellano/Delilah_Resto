@@ -1,8 +1,10 @@
 const { QueryTypes } = require("sequelize");
-const { db } = require("./db");
+const { db } = require("../database");
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const salt = 10;
+
+
 
 async function insert(user) {
     user.password_hash = await bcrypt.hash(user.password, salt);

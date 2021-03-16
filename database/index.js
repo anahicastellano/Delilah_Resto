@@ -1,7 +1,4 @@
 const {Sequelize} = require("sequelize")
-const { QueryTypes } = require("sequelize")
-// const dotenv = require('dotenv').config();
-
 
 const db = new Sequelize (process.env.DB, process.env.DBUSER, process.env.DBPASS,{
     host: process.env.DBHOST,
@@ -10,16 +7,17 @@ const db = new Sequelize (process.env.DB, process.env.DBUSER, process.env.DBPASS
 }
 )
 
-async function alreadyExist(user){
-    const alreadyExist = await db.query(`SELECT * FROM ${table} where id = :id`,{
-        type: QueryTypes.SELECT,
-        replacements: { id: id }
-    })
+async function getResourceById(table, id) {
+    const resource = await db.query(`select * from ${table} where id = :id`, {
+        replacements: { id: id },
+        type: QueryTypes.SELECT
+    });
     if (resource.length === 0) {
         throw new Error(`No existe el recurso en ${table}`);
     }
-    return alreadyExist
-}
+
+    return resource[0];
+};
 
 async function getAllResources(table) {
     return await db.query(`select * from ${table}`, { type: QueryTypes.SELECT });
@@ -41,7 +39,7 @@ async function cleanTable(table) {
 
 module.exports = {
     db,
-    alreadyExist,
+    getResourceById,
     getAllResources,
     deleteResoueceById,
     cleanTable
