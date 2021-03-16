@@ -26,7 +26,7 @@ This project proposes the creation of an online ordering system for a restaurant
 + Installing all dependences:
     ```npm install```
 
-+ Run the server by using the following command in the shell (must be inside /delilah_project):
++ Run the server by using the following command in the shell (must be inside /Delilah_Resto):
    ```npm run app.js```
 
 + Run in mysql workbrench the **/base_schema/database.sql** before using the app
