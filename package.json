@@ -3,20 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "dependencies": {
-    "bcrypt": "^5.0.0",
-    "core-util-is": "^1.0.2",
-    "dotenv": "^8.2.0",
-    "express": "^4.17.1",
-    "express-rate-limit": "^5.2.6",
-    "helmet": "^4.4.1",
-    "jsonwebtoken": "^8.5.1",
-    "mysql": "^2.18.1",
-    "mysql2": "^2.2.5",
-    "node.js": "^0.0.1-security",
-    "nodemon": "^2.0.7",
-    "sequelize": "^6.3.5"
-  },
+  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -30,5 +17,19 @@
   "bugs": {
     "url": "https://github.com/anahicastellano/Delilah_Resto/issues"
   },
-  "homepage": "https://github.com/anahicastellano/Delilah_Resto#readme"
+  "homepage": "https://github.com/anahicastellano/Delilah_Resto#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "core-util-is": "^1.0.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.2.6",
+    "helmet": "^4.4.1",
+    "jsonwebtoken": "^8.5.1",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.2.5",
+    "node.js": "^0.0.1-security",
+    "nodemon": "^2.0.7",
+    "sequelize": "^6.3.5"
+  }
 }
