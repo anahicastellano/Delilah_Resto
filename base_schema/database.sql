@@ -1,4 +1,6 @@
 CREATE SCHEMA `delilahresto`;
+CREATE USER 'delilah' @ 'localhost' IDENTIFIED BY 'D3L1L4HIS@A4R1l6!i8K\'M2m?';
+GRANT ALL PRIVILEGES ON delilaresto. * TO 'delilah'@'localhost' WITH GRANT OPTION;
 
 CREATE DATABASE `delilahresto`
 

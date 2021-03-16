@@ -3,9 +3,9 @@
 var _require = require("sequelize"),
     Sequelize = _require.Sequelize;
 
-var db = new Sequelize(process.env.DB, process.env.DBUSER, process.env.DBPASS, {
-  host: process.env.DBHOST,
-  port: process.env.DBPORT,
+var db = new Sequelize(process.env.DB_NAME, 'delilah', 'D3L1L4HIS@A4R1l6!i8K\'M2m?', {
+  host: 'localhost',
+  port: 3000,
   dialect: "mysql"
 });
 
